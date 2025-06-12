@@ -6,7 +6,7 @@
     border: none;
     outline: none; 
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 :root {
@@ -14,6 +14,10 @@
 --second-bg-color: #131313;
 --text-color: #E2DDCD;
 --main-color: #6F7C61;
+--lavender: #CBAACB;
+--matcha-light:     #B7C894;
+--matcha-mid:       #8C9A5B;
+--matcha-dark:      #4F5B23;
 }
 
 html {
@@ -28,13 +32,20 @@ body {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif JP', serif;
+}
+
+
+
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 4rem 12% 4rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(10, 15, 5, 0.5);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -48,10 +59,15 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
+    font-family: 'Noto Serif JP', serif;
 }
 
 .logo:hover {
     transform: scale(1.1);
+    text-shadow:
+    0 0 8px var(--lavender),
+    0 0 20px var(--lavender);
+  
 }
 
 .logo span { 
@@ -69,8 +85,8 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    color: var(--lavender);
+    border-bottom: 3px solid var(--lavender);
 }
 
 #menu-icon {
@@ -96,87 +112,6 @@ section {
         border: none;
         outline: none; 
         scroll-behavior: smooth;
-        font-family: "Poppins", sans-serif;
-    }
-    
-    :root {
-    --bg-color: #11120E;
-    --second-bg-color: #131313;
-    --text-color: #E2DDCD;
-    --main-color: #6F7C61;
-    }
-    
-    html {
-        font-size: 60%;
-        overflow-x: hidden;
-    }
-     
-    body {
-        background: var(--bg-color); 
-        color: var(--text-color);
-    }
-    
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 4rem 12% 4rem;
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 5;
-    }
-    
-    .logo {
-        font-size: 3rem;
-        color: var(--text-color);
-        font-weight: 700;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
-    
-    .logo:hover {
-        transform: scale(1.1);
-    }
-    
-    .logo span { 
-        text-shadow: 0 0 25px var(--main-color);
-    }
-    
-    .navbar a {
-        font-size: 1.8rem;
-        color: var(--text-color);
-        margin-left: 4rem;
-        font-weight: 500;
-        transition: 0.3s ease;
-        border-bottom: 3px solid transparent;
-    }
-    
-    .navbar a:hover,
-    .navbar a.active {
-        color: var(--main-color);
-        border-bottom: 3px solid var(--main-color);
-    }
-    
-    #menu-icon {
-    font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
-    }
-    
-    section {
-        min-height: 100vh;
-        padding: 10rem 12% 10rem;  
-    }
-    
-    .home {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10rem;
         
     }
     
@@ -187,6 +122,7 @@ section {
         text-align: left;
         justify-content: center;
         margin-top: 5rem;
+        font-family: 'Noto Serif JP', serif
     }
     
     span {
@@ -216,17 +152,19 @@ section {
     
     .home-img img {
         position: relative;
-        top: 3rem;
+        top: 5rem;
+        margin-bottom: 10rem;
         width: 32vw; 
         border-radius: 50%;
-        box-shadow: 0 0 25px var(--main-color);
+        box-shadow: 0 0 25px var(--lavender);
         cursor: pointer;
         transition: 0.4s ease-in-out;
+        
     }
     
     .home-img img:hover {
-        box-shadow: 0 0 25px var(--main-color),
-                    0 0 50px var(--main-color),
+        box-shadow: 0 0 25px var(--lavender),
+                    0 0 50px var(--lavender),
                     0 0 100px var(--main-color);
     }
     
@@ -245,7 +183,7 @@ section {
         width: 4.5rem;
         height: 4.5rem;
         background: transparent;
-        border: 2px solid var(--main-color);
+
         font-size: 2.5rem;
         border-radius: 50%;
         color: var(--main-color);
@@ -260,25 +198,28 @@ section {
         background-color: var(--main-color);
     }
     
+    button,
     .btn {
-        display: inline-block;
-        padding: 1rem 2.8rem;
-        background: var(--main-color);
-        box-shadow: 0 0 25px var(--main-color);
-        border-radius: 4rem;
-        font-size: 1.6rem;
-        color: black;
-        border: 2px solid transparent;
-        letter-spacing: 0.1rem;
-        font-weight: 600;
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
+      background: linear-gradient(to bottom, #3C3F34, #2E3129);
+      color: var(--lavender);
+      border: 1px solid #717A6D;
+      border-radius: 1.6rem;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      padding: 1.2rem 2.4rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-family: 'Noto Sans JP', sans-serif;
     }
     
+    button:hover,
     .btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 50px var(--main-color);
+      background: linear-gradient(to bottom, #6F7C61, #5F6C55);
+      color: #11120E;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
     }
+    
     
     .btn-group {
         display: flex;
@@ -447,7 +388,7 @@ section {
     .timeline-date { 
         font-size: 20px;
         font-weight: 800;
-        color: white; 
+        color: var(--text-color); 
         margin: 6px 0 15px;
     }
     
@@ -459,6 +400,7 @@ section {
         box-shadow: 0 0 10px var(--main-color);
         cursor: pointer;
         transition: 0.3s ease-in-out;
+        font-family: 'Noto Serif JP', serif;
     }
     
     .timeline-content:hover {
@@ -468,13 +410,13 @@ section {
     
     .timeline-content h3 {
         font-size: 20px;
-        color: white;
+        color: var(--text-color);
         margin: 0 0 10px;
         font-weight: 500;
     }
     
     .timeline-content p{
-        color: white;
+        color: var(--text-color);
         font-size: 16px;
         font-weight: 300;
         line-height: 22px;
@@ -500,7 +442,7 @@ section {
     
     .portfolio h2 {
         margin-bottom: 5rem;
-        color: white;
+        color: var(--text-color);
     }
     
     .portfolio-container {
@@ -520,7 +462,7 @@ section {
     }
     
     .portfolio-box:hover {
-        background: white;
+        background: var(--text-color);
         color: black;
         border: 5px solid var(--main-color);
         transform: scale(1.03);
@@ -558,7 +500,7 @@ section {
     
     .contact h2 {
         margin-bottom: 3rem;
-        color: white;
+        color: var(--text-color);
     }
     
     .contact form {
@@ -651,7 +593,7 @@ section {
     }
     
     .footer ul li a {
-        color: white;
+        color: var(--text-color);
         border-bottom: 3px solid transparent;
         transition: 0.3s ease-in-out;
     }
@@ -669,8 +611,17 @@ section {
         margin-top: 50px;
         text-align: center;
         font-size: 16px;
-        color: white;
+        color: var(--text-color);
     }
+    /* ——— Alternating section backgrounds ——— */
+section:nth-of-type(odd) {
+    background-color: var(--bg-color);
+  }
+  
+  section:nth-of-type(even) {
+    background-color: var(--second-bg-color);
+  }
+  
     
     @media(max-width:1285px) {
         html {
@@ -740,7 +691,7 @@ section {
             display: block; 
             font-size: 2rem;
             margin: 3rem 0;
-            color: white;
+            color: var(--text-color);
         }
         .home {
             flex-direction: column-reverse;
@@ -1038,7 +989,7 @@ span {
 .timeline-date { 
     font-size: 20px;
     font-weight: 800;
-    color: white; 
+    color: var(--text-color);
     margin: 6px 0 15px;
 }
 
@@ -1059,13 +1010,13 @@ span {
 
 .timeline-content h3 {
     font-size: 20px;
-    color: white;
+    color: var(--text-color);
     margin: 0 0 10px;
     font-weight: 500;
 }
 
 .timeline-content p{
-    color: white;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: 300;
     line-height: 22px;
@@ -1091,7 +1042,7 @@ span {
 
 .portfolio h2 {
     margin-bottom: 5rem;
-    color: white;
+    color: var(--text-color);
 }
 
 .portfolio-container {
@@ -1111,7 +1062,7 @@ span {
 }
 
 .portfolio-box:hover {
-    background: white;
+    background: var(--text-color);
     color: black;
     border: 5px solid var(--main-color);
     transform: scale(1.03);
@@ -1142,12 +1093,12 @@ span {
 }
 
 .contact {
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
 }
 
 .contact h2 {
     margin-bottom: 3rem;
-    color: white;
+    color: var(--text-color);
 }
 
 .contact form {
@@ -1227,13 +1178,18 @@ span {
 }
 
 .footer ul li a {
-    color: white;
+    color: var(--text-color);
     border-bottom: 3px solid transparent;
     transition: 0.3s ease-in-out;
 }
 
 .footer ul li a:hover {
-    border-bottom: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--lavender);
+}
+.footer a:hover,
+.footer a.active {
+    color: var(--lavender);
+    border-bottom: 3px solid var(--lavender);
 }
 
 .footer ul li {
@@ -1245,7 +1201,7 @@ span {
     margin-top: 50px;
     text-align: center;
     font-size: 16px;
-    color: white;
+    color: var(--text-color);
 }
 
 @media(max-width:1285px) {
@@ -1316,7 +1272,7 @@ span {
         display: block; 
         font-size: 2rem;
         margin: 3rem 0;
-        color: white;
+        color: var(--text-color);
     }
     .home {
         flex-direction: column-reverse;
