@@ -377,7 +377,7 @@ section {
         top: 10px;
     }
     
-    .timeline-date { 
+    .timeline-title { 
         font-size: 20px;
         font-weight: 800;
         color: var(--text-color); 
@@ -636,8 +636,8 @@ section:nth-of-type(odd) {
         header {
             padding: 2rem 3%;
         }
-        section {
-            padding: 10rem 3% 2rem;
+       section {
+        padding: 10rem 3% 2rem;
         }
         .timeline-items::before {
             left: 7px;
@@ -666,9 +666,12 @@ section:nth-of-type(odd) {
     }
     
     @media(max-width:895px) {
+
+
         #menu-icon {
             display: block;
         }
+
         .navbar {
             position: absolute;
             top: 100%;
@@ -682,33 +685,75 @@ section:nth-of-type(odd) {
             border-bottom: 2px solid var(--main-color);
             display: none;
         }
+
         .navbar.active {
             display: block;
         }
+        
         .navbar a {
             display: block; 
             font-size: 2rem;
             margin: 3rem 0;
             color: var(--text-color);
         }
+
         .home {
             flex-direction: column-reverse;
-            margin: 5rem 4rem;
+            margin: 2rem 1.5rem;
+            gap: 1.5rem;
+            justify-content: center;
         }
+
         .home-content h3 {
             font-size: 2.6rem;
         }
+
         .home-content h1 {
-            font-size: 8rem;
-            margin-top: 3rem;
+            font-size: 5.5rem;
+            margin-top: 1.5rem;
         }
+
         .home-content p {
             max-width: 600px;
             margin: 0 auto;
         }
+
         .home-img img {
             width: 56vw;
+            max-width: 215px;
+            margin-bottom: 0.5rem;
         }
+
+        .timeline-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .timeline-item {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-content,
+        .timeline-content p {
+            font-size: 1.4rem !important
+        }
+
+        .timeline-content {
+            max-width: 300px;
+            width: 400vw;
+            white-space: normal;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            padding: 4rem;
+        }
+
+        .timeline-title {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
         .portfolio h2 {
             margin-bottom: 3rem;
         }
