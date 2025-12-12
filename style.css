@@ -446,11 +446,22 @@ section {
     
     .portfolio-box {
         background-color: var(--main-color);
-        height: 300px;
+        height: 360px;
         border-radius: 3rem;
         border: 5px solid transparent; 
         cursor: pointer; 
         transition: 0.4s ease-in-out;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-box img {
+        width: 100%;
+        height: 62%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
     }
     
     .portfolio-box:hover {
@@ -460,29 +471,33 @@ section {
         transform: scale(1.03);
     }
     
-    .portfolio-box .portfolio.info {
+    .portfolio-box .portfolio-info {
+        flex: 1;
+        padding: 2.5rem 3rem;
         display: flex;
         flex-direction: column;
-        text-align: left;
-        max-height: 200px;
-        justify-content: left;
-        align-items: baseline;
-        padding: 5rem 5rem;
+        justify-content: center;
+        gap: 1rem;
     }
     
     .portfolio-info h4 {
-        font-size: 3rem;
+        font-size: 2.6rem;
         font-weight: 800;
-        line-height: 2;
+        line-height: 1.2;
     }
     
     .portfolio-info p {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 600;
-        max-height: 100px;
-        line-height: 1.7;
-        margin: auto;
+        line-height: 1.6;
+
+        display: -webkit-box;
+        line-clamp: 4;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
+    
     
     .contact {
         background-color: var(--bg-color);
@@ -761,7 +776,16 @@ section:nth-of-type(odd) {
         .portfolio-container {
             grid-template-columns: repeat(1,1fr);
         }
-    }
+
+        .portfolio-box img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            border-radius: 14px;
+        }
+
+}
     
 
 
